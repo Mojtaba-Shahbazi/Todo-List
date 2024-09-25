@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.Container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todoBox {
+    width: 100% ;
+    max-width: 540px;
+    background: transparent;
+    border: 2px solid #e6b7eca1;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+}
+h1 {
+    color: #eee;
+    margin-bottom: 36px;
+}
+.input-Container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    background-color: #BDA8C076;
+    border: 2px solid #e6b7eca1;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+.input-Container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #eee;
+    font-size: 16px;
+    padding: 10px;
+}
+.input-Container input::placeholder {
+    color: #bfbfbf;
+}
+
+.input-Container button {
+    border: none;
+    outline: none;
+    background: #e6b7eca1;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+ul {
+    width: 80%;
+    max-height: 400px;
+    overflow: auto;
+}
+ul li {
+    list-style: none;
+    background-color: #eee;
+    color: #44366c;
+    border-radius: 10px;
+    /*border:#e6b7eca1 solid 2px ;*/
+    padding: 12px 8px 12px 50px;
+    margin-bottom: 14px;
+    user-select: none;
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.empty-image {
+    margin: 20px auto 0;
+    display: block;
+}
+ul li:hover {
+    background-color: #463c7b;
+    color: white;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li:last-child    {margin-bottom:0;}
+
+ul::-webkit-scrollbar  {width: 0;}
+
+ul li.Checked {
+    text-decoration: line-through;
+    color: #a2a2a2;
+}
+li.Checked::before {
+    background-image: url("images/checked21.png");
+}
+li span {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 5px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+li span:hover {
+    background-color: #f5a7a3;
+    font-size: 28px;
+}
